@@ -45,10 +45,11 @@
  
                     // 4. 获取图像的像素信息
                     var imgData = ctx.getImageData(0, 0, img.width, img.height);
+                    console.log(imgData);
 
-                    var particals = [];
+                    // var particals = [];
                     // 拣取部分像素粒子作为轮廓
-                    function getParticals() {
+                    /* function getParticals() {
                         // 100 * 100 的网格拣取 像素粒子
                         var rows = 100,
                             cols = 100;
@@ -91,7 +92,7 @@
 
                     // 5. 执行粒子化过程
                     //getParticals();
-                    //draw();
+                    //draw();*/
                 };
                 img.src= './img01.png';
             }
