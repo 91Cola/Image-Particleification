@@ -26,7 +26,6 @@
 <body>
     <canvas id="canvas" width="600" height="400">您的浏览器不支持canvas.</canvas>
     <script>
-        console.log(1);
         (function () {
             // 1. 常规套路，获取canvas,context
             var canvas = document.getElementById('canvas');
@@ -46,11 +45,10 @@
  
                     // 4. 获取图像的像素信息
                     var imgData = ctx.getImageData(0, 0, img.width, img.height);
-                    console.log(imgData);
 
-                    // var particals = [];
+                    var particals = [];
                     // 拣取部分像素粒子作为轮廓
-                    /* function getParticals() {
+                    function getParticals() {
                         // 100 * 100 的网格拣取 像素粒子
                         var rows = 100,
                             cols = 100;
@@ -92,8 +90,9 @@
                     }
 
                     // 5. 执行粒子化过程
-                    //getParticals();
-                    //draw();*/
+                    getParticals();
+                    console.log(particals);
+                    //draw();
                 };
                 img.src= './img01.png';
             }
